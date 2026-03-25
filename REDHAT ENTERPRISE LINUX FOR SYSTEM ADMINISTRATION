@@ -5,6 +5,8 @@ In this lab, you learned how to effectively navigate and search man pages in RHE
 
 Furthermore, you gained skills in searching for specific strings within an open man page using / for forward searches and ? for backward searches, and repeating searches with n and N. You also learned how to find relevant man pages by keyword using man -k or apropos, and how to perform full-text searches across all man pages for keywords using man 
 
+A C FILE THAT ATTEMPTS TO READ RESTRICTED FILE
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
