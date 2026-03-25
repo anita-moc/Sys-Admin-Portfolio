@@ -4,3 +4,28 @@ Furthermore, you gained proficiency in organizing your file system using mkdir t
 In this lab, you learned how to effectively navigate and search man pages in RHEL, which are crucial for understanding commands and their functionalities. You practiced navigating within a man page using keys like Spacebar, PageUp, DownArrow, UpArrow, D, U, G, and Shift+G, and exiting with Q.
 
 Furthermore, you gained skills in searching for specific strings within an open man page using / for forward searches and ? for backward searches, and repeating searches with n and N. You also learned how to find relevant man pages by keyword using man -k or apropos, and how to perform full-text searches across all man pages for keywords using man 
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+int main() {
+    FILE *fp;
+    char buffer[256];
+
+    printf("Attempting to read /home/labex/project/secret_data.txt...\n");
+
+    fp = fopen("/home/labex/project/secret_data.txt", "r");
+    if (fp == NULL) {
+        perror("Error opening file");
+        return 1;
+    }
+
+    while (fgets(buffer, sizeof(buffer), fp) != NULL) {
+        printf("%s", buffer);
+    }
+
+    fclose(fp);
+    printf("Successfully read file.\n");
+    return 0;
+}
