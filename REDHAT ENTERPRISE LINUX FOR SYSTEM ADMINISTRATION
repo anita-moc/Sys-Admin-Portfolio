@@ -26,8 +26,12 @@ int main() {
     while (fgets(buffer, sizeof(buffer), fp) != NULL) {
         printf("%s", buffer);
     }
-
-    fclose(fp);
+ fclose(fp);
     printf("Successfully read file.\n");
     return 0;
 }
+
+
+In this lab, we delved into the fundamental aspects of managing Linux file system permissions. We began by mastering the ls -l command to interpret file and directory permissions, understanding the significance of user, group, and others categories, and the read, write, and execute permissions. This foundational knowledge was then applied to modify permissions using chmod in both symbolic and octal modes, providing flexibility in setting access rights.
+
+Furthermore, we learned how to change file ownership with the chown command, which is crucial for assigning administrative control. The lab also covered the understanding and application of special permissions (SUID, SGID, and Sticky Bit), which offer advanced control over execution and file creation behaviors. Finally, we explored how to configure default permissions for newly created files and directories using umask, ensuring consistent permission settings across the system.
