@@ -1,18 +1,19 @@
-# PowerShell for Windows Server Fundamentals
+# PowerShell for Windows Server – Core Fundamentals
 
 ## Overview
-This document summarizes my foundational learning and hands-on practice using PowerShell for Windows Server administration. PowerShell is a powerful command-line shell and scripting language used to automate administrative tasks, manage system configurations, and interact with Windows Server roles such as Active Directory, networking, and services.
+This document summarizes foundational PowerShell skills for Windows Server administration. It covers system management, automation, networking, Active Directory tasks, and security-focused administrative operations used in enterprise environments.
+
+PowerShell is a critical tool for Windows Server administrators and cybersecurity professionals due to its ability to automate tasks and manage systems at scale.
 
 ---
 
-## Core Concepts
+## 1. PowerShell Basics
 
-### 1. What is PowerShell?
-- Command-line shell and scripting language for Windows
-- Built on .NET framework
-- Used for automation, configuration, and system administration
-- Works with cmdlets (verb-noun commands)
+### What is PowerShell?
+- Command-line shell and scripting language built on .NET
+- Used for system administration, automation, and configuration management
+- Works with **cmdlets** (Verb-Noun structure)
 
-Example structure:
-```powershell id="ps1"
+Example:
+```powershell id="psb1"
 Get-Service
