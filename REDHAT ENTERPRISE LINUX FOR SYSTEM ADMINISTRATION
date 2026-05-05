@@ -1,37 +1,143 @@
-In this lab, you learned fundamental command-line tools for managing files and directories in RHEL. You began by mastering pwd to identify your current working directory and ls to list directory contents, including using options like -l for detailed information and -a to reveal hidden files. You then progressed to navigating the file system with cd and creating new files with touch.
+# RHEL Linux Administration & Cybersecurity Fundamentals
 
-Furthermore, you gained proficiency in organizing your file system using mkdir to create directories, cp to copy files and directories, mv to move or rename them, and rm to remove them. The lab also covered the creation of hard and symbolic links using ln, and how to efficiently select files using shell expansions, enhancing your ability to manage files and directories effectively from the command line.
-In this lab, you learned how to effectively navigate and search man pages in RHEL, which are crucial for understanding commands and their functionalities. You practiced navigating within a man page using keys like Spacebar, PageUp, DownArrow, UpArrow, D, U, G, and Shift+G, and exiting with Q.
+## Overview
+This repository documents my hands-on learning and practical experience with Red Hat Enterprise Linux (RHEL) system administration and foundational cybersecurity concepts. The work was completed through structured labs and self-guided practice using virtualized environments.
 
-Furthermore, you gained skills in searching for specific strings within an open man page using / for forward searches and ? for backward searches, and repeating searches with n and N. You also learned how to find relevant man pages by keyword using man -k or apropos, and how to perform full-text searches across all man pages for keywords using man 
+---
 
-A C FILE THAT ATTEMPTS TO READ RESTRICTED FILE
+## Core Skills Acquired
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
+### 1. System Access & Remote Management
+- Configured and managed SSH (OpenSSH)
+- Secured remote access using authentication mechanisms
+- Verified connectivity and troubleshooting login issues
 
-int main() {
-    FILE *fp;
-    char buffer[256];
+---
 
-    printf("Attempting to read /home/labex/project/secret_data.txt...\n");
+### 2. System Logging & Monitoring
+- Explored system logging architecture
+- Used `journalctl` to query systemd logs
+- Configured persistent journaling
+- Sent and analyzed custom syslog messages
 
-    fp = fopen("/home/labex/project/secret_data.txt", "r");
-    if (fp == NULL) {
-        perror("Error opening file");
-        return 1;
-    }
+---
 
-    while (fgets(buffer, sizeof(buffer), fp) != NULL) {
-        printf("%s", buffer);
-    }
- fclose(fp);
-    printf("Successfully read file.\n");
-    return 0;
-}
+### 3. Networking Configuration
+- Validated network interfaces and IP addresses
+- Configured static IP addresses
+- Managed network connections (activate/deactivate/modify)
+- Configured hostname and DNS resolution
+- Tested connectivity using tools like `ping` and `ss`
 
+---
 
-In this lab, we delved into the fundamental aspects of managing Linux file system permissions. We began by mastering the ls -l command to interpret file and directory permissions, understanding the significance of user, group, and others categories, and the read, write, and execute permissions. This foundational knowledge was then applied to modify permissions using chmod in both symbolic and octal modes, providing flexibility in setting access rights.
+### 4. File Archiving & Compression
+- Created and extracted archives using `tar`
+- Worked with compressed formats:
+  - `.tar.gz`
+  - `.tar.bz2`
+  - `.tar.xz`
 
-Furthermore, we learned how to change file ownership with the chown command, which is crucial for assigning administrative control. The lab also covered the understanding and application of special permissions (SUID, SGID, and Sticky Bit), which offer advanced control over execution and file creation behaviors. Finally, we explored how to configure default permissions for newly created files and directories using umask, ensuring consistent permission settings across the system.
+---
+
+### 5. Secure File Transfer
+- Transferred files securely using:
+  - `scp`
+  - `sftp`
+- Understood SSH-based secure communication
+
+---
+
+### 6. File Synchronization
+- Used `rsync` for efficient file transfers
+- Performed incremental backups
+- Synced local and remote directories securely over SSH
+
+---
+
+### 7. RPM Package Management
+- Queried installed packages using `rpm`
+- Inspected package details, dependencies, and contents
+- Verified package integrity
+- Identified which package owns a file
+
+---
+
+### 8. DNF Package Management
+- Installed and removed software packages
+- Managed package dependencies
+- Searched and inspected packages
+- Cleaned and managed package cache
+
+---
+
+### 9. Repository Management
+- Enabled and disabled repositories
+- Added external repositories
+- Managed repository configuration files in `/etc/yum.repos.d/`
+
+---
+
+### 10. DNF Transaction History
+- Viewed package transaction history
+- Inspected detailed transaction logs
+- Performed rollback and undo operations
+
+---
+
+### 11. Software Location & System Structure
+- Located binaries using:
+  - `which`
+  - `whereis`
+  - `find`
+  - `locate`
+- Identified package ownership of system files
+- Explored standard Linux filesystem hierarchy:
+  - `/etc`, `/var`, `/usr`, `/bin`, `/lib`
+
+---
+
+### 12. Authentication Testing Concepts (Lab Environment)
+- Learned fundamentals of:
+  - Brute-force attacks
+  - Dictionary attacks
+- Used Hydra in controlled lab environments
+- Understood login testing mechanisms and limitations
+- Explored detection and prevention strategies
+
+---
+
+## Tools & Technologies
+- RHEL / Rocky Linux / AlmaLinux
+- Bash CLI
+- OpenSSH
+- DNF & RPM
+- rsync
+- tar
+- Hydra (lab use only)
+- Proxmox (virtualization lab environment)
+
+---
+
+## Key Takeaways
+- Strong foundation in Linux system administration
+- Practical experience with enterprise package management
+- Understanding of secure system configuration and file handling
+- Exposure to cybersecurity fundamentals in controlled environments
+- Ability to troubleshoot, configure, and manage Linux systems effectively
+
+---
+
+## Next Learning Goals
+- SELinux policy management
+- Firewall configuration (firewalld)
+- User and permission management
+- Process monitoring and system performance
+- Bash scripting and automation
+- Security hardening and auditing
+
+---
+
+## Author
+Anita Mocheche  
+Aspiring Cybersecurity Specialist | Linux Enthusiast | Digital Marketer
